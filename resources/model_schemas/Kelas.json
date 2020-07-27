@@ -1,0 +1,66 @@
+[
+    {
+        "name": "idkelas",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "name": "nama",
+        "dbType": "string,150",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "idprodi",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "idwali_kelas",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Prodi,idprodi"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Walikela,idwali_kelas"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,Prodi,siswas"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,GuruMapel,walikelas"
+    }
+]
